@@ -19,7 +19,7 @@ function Home() {
     {
       id: 3,
       title: 'Secadoras',
-      image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0571?w=600&q=80',
+      image: 'https://www.buyitdirect.ie/Images/BWE71452SUKN_2_Supersize.jpg?w=600&q=80',
       link: '/servicios/secadoras'
     },
     {

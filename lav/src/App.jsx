@@ -121,7 +121,7 @@ function Header() {
       <div className="header-container">
         <Link to="/" className="logo">
           <div className="logo-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="../public/favicon.svg">
               <circle cx="20" cy="20" r="18" stroke="#0088d1" strokeWidth="2" fill="none"/>
               <path d="M12 20h16M20 12v16" stroke="#0088d1" strokeWidth="2"/>
               <circle cx="20" cy="20" r="6" stroke="#0088d1" strokeWidth="2" fill="none"/>
@@ -380,7 +380,7 @@ const secadorasData = {
   title: 'Secadoras',
   subtitle: 'Servicio técnico especializado en secadoras LG y Samsung',
   description: 'Mantenemos tu secadora funcionando de manera eficiente. Nuestros técnicos están preparados para reparar cualquier problema en secadoras de las marcas LG y Samsung.',
-  image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0571?w=800&q=80',
+  image: 'https://www.hola.com/horizon/landscape/1a82677f57f3-secadoras-t.jpg?im=Resize=(1200)',
   services: [
     'Reparación de sistema de calentamiento',
     'Cambio de resistencias',
@@ -397,7 +397,7 @@ const airesData = {
   title: 'Aires Acondicionados',
   subtitle: 'Servicio técnico especializado en aires acondicionados LG y Samsung',
   description: 'Instalamos, reparamos y damos mantenimiento a tu aire acondicionado. Contamos con técnicos certificados para atender equipos LG y Samsung de todo tipo.',
-  image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80',
+  image: 'https://blog.homedepot.com.mx/wp-content/uploads/2023/05/imagen-1.jpeg',
   services: [
     'Instalación de equipos nuevos',
     'Recarga de gas refrigerante',
@@ -451,7 +451,7 @@ function Home() {
     {
       id: 4,
       title: 'Aires acondicionados',
-      image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80',
+      image: 'https://i5.walmartimages.com/asr/3439e1bc-1664-485a-9197-4994d63403c3.6f3ef029d1f49bc0d18e13948532a0a9.png',
       link: '/servicios/aires-acondicionados'
     }
   ];
@@ -554,7 +554,7 @@ function Home() {
       <section className="brands-section">
         <div className="container">
           <div className="brands-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="../public/favicon.svg">
               <circle cx="20" cy="20" r="18" stroke="#0088d1" strokeWidth="2" fill="none"/>
               <path d="M12 20h16M20 12v16" stroke="#0088d1" strokeWidth="2"/>
               <circle cx="20" cy="20" r="6" stroke="#0088d1" strokeWidth="2" fill="none"/>
@@ -565,8 +565,8 @@ function Home() {
             secadoras y aires acondicionados <strong>LG</strong> y <strong>Samsung</strong>.
           </p>
           <div className="brand-logos-large">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png" alt="LG" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung" />
+            <img src="https://pngimg.com/uploads/lg_logo/lg_logo_PNG21.png" alt="LG" />
+            <img src="https://www.freepnglogos.com/uploads/black-samsung-logo-png-21.png" alt="Samsung" />
           </div>
         </div>
       </section>
@@ -592,7 +592,7 @@ function Home() {
               </div>
               <div className="promo-card">
                 <div className="promo-image">
-                  <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="Cambio de filtro" />
+                  <img src="https://th.bing.com/th/id/R.356de3556effa6ddc4c67e205f6bc785?rik=cOOKy0Z7ebApJw&pid=ImgRaw&r=0" alt="Cambio de filtro" />
                 </div>
                 <div className="promo-info">
                   <h3>Servicio de cambio de filtro para neveras.</h3>

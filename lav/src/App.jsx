@@ -43,7 +43,7 @@ const slides = [
     id: 2,
     title: 'Reparación de aires acondicionados',
     subtitle: 'Servicio técnico especializado para tu comodidad.',
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=80'
+    image: 'https://www.hisense.com.ar/wp-content/uploads/2025/02/OK-1-scaled.jpg'
   },
   {
     id: 3,
@@ -177,8 +177,8 @@ function Header() {
           </ul>
 
           <div className="brand-logos">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png" alt="LG" className="brand-logo" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung" className="brand-logo" />
+            <img src="https://th.bing.com/th/id/R.6b94815dcfbda9bf4aa6703d4727b0c4?rik=V1E5nrD%2bV4nRsA&pid=ImgRaw&r=0" alt="LG" className="brand-logo" />
+            <img src="https://tse3.mm.bing.net/th/id/OIP.eL1nssYYwp78LpeGkIIrtQHaBc?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Samsung" className="brand-logo" />
           </div>
         </nav>
       </div>
@@ -332,8 +332,8 @@ function ServicePage({ data }) {
         <div className="container">
           <p>Somos especialistas en reparación de electrodomésticos de las marcas:</p>
           <div className="brand-logos-service">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png" alt="LG" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung" />
+            <img src="https://th.bing.com/th/id/R.6b94815dcfbda9bf4aa6703d4727b0c4?rik=V1E5nrD%2bV4nRsA&pid=ImgRaw&r=0" alt="LG" />
+            <img src="https://tse3.mm.bing.net/th/id/OIP.eL1nssYYwp78LpeGkIIrtQHaBc?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Samsung" />
           </div>
         </div>
       </section>

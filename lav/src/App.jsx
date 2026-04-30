@@ -1,3 +1,4 @@
+
 // App.jsx - Archivo principal unificado
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
@@ -121,7 +122,11 @@ function Header() {
       <div className="header-container">
         <Link to="/" className="logo">
           <div className="logo-icon">
-            <img src="../public/favicon.svg" alt="Servicentro" width="40" height="40" />
+            <svg viewBox="0 0 40 40" fill="none" xmlns="../public/favicon.svg">
+              <circle cx="20" cy="20" r="18" stroke="#0088d1" strokeWidth="2" fill="none"/>
+              <path d="M12 20h16M20 12v16" stroke="#0088d1" strokeWidth="2"/>
+              <circle cx="20" cy="20" r="6" stroke="#0088d1" strokeWidth="2" fill="none"/>
+            </svg>
           </div>
           <span className="logo-text">SERVICENTRO</span>
         </Link>
@@ -550,7 +555,11 @@ function Home() {
       <section className="brands-section">
         <div className="container">
           <div className="brands-icon">
-            <img src="../public/favicon.svg" alt="Servicentro" width="40" height="40" />
+            <svg viewBox="0 0 40 40" fill="none" xmlns="../public/favicon.svg">
+              <circle cx="20" cy="20" r="18" stroke="#0088d1" strokeWidth="2" fill="none"/>
+              <path d="M12 20h16M20 12v16" stroke="#0088d1" strokeWidth="2"/>
+              <circle cx="20" cy="20" r="6" stroke="#0088d1" strokeWidth="2" fill="none"/>
+            </svg>
           </div>
           <p>
             Contáctanos para realizar cualquier servicio técnico especializado en neveras, lavadoras, 

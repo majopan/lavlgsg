@@ -121,11 +121,7 @@ function Header() {
       <div className="header-container">
         <Link to="/" className="logo">
           <div className="logo-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="../public/favicon.svg">
-              <circle cx="20" cy="20" r="18" stroke="#0088d1" strokeWidth="2" fill="none"/>
-              <path d="M12 20h16M20 12v16" stroke="#0088d1" strokeWidth="2"/>
-              <circle cx="20" cy="20" r="6" stroke="#0088d1" strokeWidth="2" fill="none"/>
-            </svg>
+            <img src="../public/favicon.svg" alt="Servicentro" width="40" height="40" />
           </div>
           <span className="logo-text">SERVICENTRO</span>
         </Link>
@@ -554,11 +550,7 @@ function Home() {
       <section className="brands-section">
         <div className="container">
           <div className="brands-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="../public/favicon.svg">
-              <circle cx="20" cy="20" r="18" stroke="#0088d1" strokeWidth="2" fill="none"/>
-              <path d="M12 20h16M20 12v16" stroke="#0088d1" strokeWidth="2"/>
-              <circle cx="20" cy="20" r="6" stroke="#0088d1" strokeWidth="2" fill="none"/>
-            </svg>
+            <img src="../public/favicon.svg" alt="Servicentro" width="40" height="40" />
           </div>
           <p>
             Contáctanos para realizar cualquier servicio técnico especializado en neveras, lavadoras, 

@@ -1,4 +1,4 @@
-// App.js - Archivo principal unificado
+// App.jsx - Archivo principal unificado
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './App.css';
@@ -306,7 +306,7 @@ function ServicePage({ data }) {
             <p>Contáctanos ahora y recibe atención personalizada de nuestros técnicos especializados.</p>
             <div className="cta-buttons">
               <a 
-                href={`https://wa.me/573052924748?text=Hola,%20necesito%20servicio%20técnico%20para%20mi%20${data.title.toLowerCase()}`}
+                href={`https://wa.me/573052924748?text=Hola,%20necesito%20servicio%20técnico%20para%20mi%20${encodeURIComponent(data.title.toLowerCase())}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-white"
@@ -339,6 +339,92 @@ function ServicePage({ data }) {
       </section>
     </div>
   );
+}
+
+// ============ DATOS DE SERVICIOS ============
+const neverasData = {
+  title: 'Neveras',
+  subtitle: 'Servicio técnico especializado en neveras LG y Samsung',
+  description: 'Ofrecemos mantenimiento preventivo y correctivo para tu nevera. Nuestros técnicos están capacitados para diagnosticar y reparar cualquier falla en refrigeradores de las marcas LG y Samsung.',
+  image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=800&q=80',
+  services: [
+    'Reparación de sistema de enfriamiento',
+    'Cambio de termostato',
+    'Reparación de motor',
+    'Cambio de filtros de agua',
+    'Reparación de dispensador de agua/hielo',
+    'Mantenimiento preventivo',
+    'Reparación de puertas y sellos',
+    'Diagnóstico de fallas eléctricas'
+  ]
+};
+
+const lavadorasData = {
+  title: 'Lavadoras',
+  subtitle: 'Servicio técnico especializado en lavadoras LG y Samsung',
+  description: 'Reparamos y mantenemos tu lavadora en óptimas condiciones. Contamos con técnicos certificados para atender cualquier tipo de falla en lavadoras LG y Samsung.',
+  image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&q=80',
+  services: [
+    'Reparación de tambor',
+    'Cambio de rodamientos',
+    'Reparación de bomba de agua',
+    'Cambio de correas',
+    'Reparación de tarjeta electrónica',
+    'Mantenimiento preventivo',
+    'Reparación de sistema de drenaje',
+    'Diagnóstico de errores de código'
+  ]
+};
+
+const secadorasData = {
+  title: 'Secadoras',
+  subtitle: 'Servicio técnico especializado en secadoras LG y Samsung',
+  description: 'Mantenemos tu secadora funcionando de manera eficiente. Nuestros técnicos están preparados para reparar cualquier problema en secadoras de las marcas LG y Samsung.',
+  image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0571?w=800&q=80',
+  services: [
+    'Reparación de sistema de calentamiento',
+    'Cambio de resistencias',
+    'Limpieza de ductos de ventilación',
+    'Reparación de motor',
+    'Cambio de correas y poleas',
+    'Mantenimiento preventivo',
+    'Reparación de sensores de humedad',
+    'Diagnóstico de fallas eléctricas'
+  ]
+};
+
+const airesData = {
+  title: 'Aires Acondicionados',
+  subtitle: 'Servicio técnico especializado en aires acondicionados LG y Samsung',
+  description: 'Instalamos, reparamos y damos mantenimiento a tu aire acondicionado. Contamos con técnicos certificados para atender equipos LG y Samsung de todo tipo.',
+  image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80',
+  services: [
+    'Instalación de equipos nuevos',
+    'Recarga de gas refrigerante',
+    'Limpieza de filtros y serpentines',
+    'Reparación de compresor',
+    'Mantenimiento preventivo',
+    'Reparación de fugas',
+    'Cambio de capacitores',
+    'Diagnóstico y reparación de tarjetas'
+  ]
+};
+
+// ============ PÁGINAS DE SERVICIOS ============
+function Neveras() { 
+  return <ServicePage data={neverasData} />; 
+}
+
+function Lavadoras() { 
+  return <ServicePage data={lavadorasData} />; 
+}
+
+function Secadoras() { 
+  return <ServicePage data={secadorasData} />; 
+}
+
+function AiresAcondicionados() { 
+  return <ServicePage data={airesData} />; 
 }
 
 // ============ PÁGINA DE INICIO ============
@@ -425,14 +511,14 @@ function Home() {
         <div className="container">
           <div className="services-cards">
             {servicesHome.map((service) => (
-              <a href={service.link} key={service.id} className="service-card">
+              <Link to={service.link} key={service.id} className="service-card">
                 <div className="service-image">
                   <img src={service.image} alt={service.title} />
                 </div>
                 <div className="service-label">
                   <span>{service.title}</span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -775,80 +861,6 @@ function Contacto() {
     </div>
   );
 }
-
-// ============ PÁGINAS DE SERVICIOS ============
-const neverasData = {
-  title: 'Neveras',
-  subtitle: 'Servicio técnico especializado en neveras LG y Samsung',
-  description: 'Ofrecemos mantenimiento preventivo y correctivo para tu nevera. Nuestros técnicos están capacitados para diagnosticar y reparar cualquier falla en refrigeradores de las marcas LG y Samsung.',
-  image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=800&q=80',
-  services: [
-    'Reparación de sistema de enfriamiento',
-    'Cambio de termostato',
-    'Reparación de motor',
-    'Cambio de filtros de agua',
-    'Reparación de dispensador de agua/hielo',
-    'Mantenimiento preventivo',
-    'Reparación de puertas y sellos',
-    'Diagnóstico de fallas eléctricas'
-  ]
-};
-
-const lavadorasData = {
-  title: 'Lavadoras',
-  subtitle: 'Servicio técnico especializado en lavadoras LG y Samsung',
-  description: 'Reparamos y mantenemos tu lavadora en óptimas condiciones. Contamos con técnicos certificados para atender cualquier tipo de falla en lavadoras LG y Samsung.',
-  image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&q=80',
-  services: [
-    'Reparación de tambor',
-    'Cambio de rodamientos',
-    'Reparación de bomba de agua',
-    'Cambio de correas',
-    'Reparación de tarjeta electrónica',
-    'Mantenimiento preventivo',
-    'Reparación de sistema de drenaje',
-    'Diagnóstico de errores de código'
-  ]
-};
-
-const secadorasData = {
-  title: 'Secadoras',
-  subtitle: 'Servicio técnico especializado en secadoras LG y Samsung',
-  description: 'Mantenemos tu secadora funcionando de manera eficiente. Nuestros técnicos están preparados para reparar cualquier problema en secadoras de las marcas LG y Samsung.',
-  image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0571?w=800&q=80',
-  services: [
-    'Reparación de sistema de calentamiento',
-    'Cambio de resistencias',
-    'Limpieza de ductos de ventilación',
-    'Reparación de motor',
-    'Cambio de correas y poleas',
-    'Mantenimiento preventivo',
-    'Reparación de sensores de humedad',
-    'Diagnóstico de fallas eléctricas'
-  ]
-};
-
-const airesData = {
-  title: 'Aires Acondicionados',
-  subtitle: 'Servicio técnico especializado en aires acondicionados LG y Samsung',
-  description: 'Instalamos, reparamos y damos mantenimiento a tu aire acondicionado. Contamos con técnicos certificados para atender equipos LG y Samsung de todo tipo.',
-  image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80',
-  services: [
-    'Instalación de equipos nuevos',
-    'Recarga de gas refrigerante',
-    'Limpieza de filtros y serpentines',
-    'Reparación de compresor',
-    'Mantenimiento preventivo',
-    'Reparación de fugas',
-    'Cambio de capacitores',
-    'Diagnóstico y reparación de tarjetas'
-  ]
-};
-
-function Neveras() { return <ServicePage data={neverasData} />; }
-function Lavadoras() { return <ServicePage data={lavadorasData} />; }
-function Secadoras() { return <ServicePage data={secadorasData} />; }
-function AiresAcondicionados() { return <ServicePage data={airesData} />; }
 
 // ============ COMPONENTE PRINCIPAL APP ============
 function App() {

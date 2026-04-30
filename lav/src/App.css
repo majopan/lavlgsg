@@ -103,6 +103,7 @@ ul {
 .section-divider.white {
   background: linear-gradient(90deg, white 0%, white 50%, transparent 50%, transparent 100%);
   background-size: 8px 4px;
+  background-repeat: repeat-x;
 }
 
 /* ============ HEADER STYLES ============ */
@@ -683,6 +684,9 @@ ul {
   background-color: #0088d1;
   font-size: 13px;
   padding: 10px 20px;
+}
+.promo-info .btn:hover {
+  background-color: #006ba3;
 }
 
 .why-choose-us {
